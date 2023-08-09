@@ -30,7 +30,7 @@ export default function SearchResultPage() {
   return (
     <div>
       <p className="fw-bold fs-4 text-center my-0">
-        Searching &ldquo;{processedSearchInput}&rdquo;
+        Searching "{processedSearchInput}"
       </p>
       <p className="fw-bold fs-4 text-center">
         Found {filteredMovies.length} result(s)
