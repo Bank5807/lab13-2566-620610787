@@ -1,12 +1,13 @@
 "use client";
 
-import { useRouter } from "next/router";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { MovieRow } from "@/components/MovieRow";
 import { movieDB } from "@/libs/movieDB";
 
 export default function SearchResultPage() {
   const router = useRouter();
-  const { searchInput } = router.query;
+  const { searchInput } = router.query || {};
 
   //tip1 : before filtering movie, replace all "%20" with " " (space) in the input
   const processedSearchInput = searchInput
